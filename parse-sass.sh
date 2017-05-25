@@ -9,7 +9,7 @@ SASSC_OPT="-M -t expanded"
 
 echo Generating the css...
 
-for color in '' '-dark' '-light' ; do
+for color in '-dark' ; do
   sassc $SASSC_OPT src/gtk-3.0/3.18/gtk${color}.{scss,css}
 
   for size in '' '-compact' ; do
