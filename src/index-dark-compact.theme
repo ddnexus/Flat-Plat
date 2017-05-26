@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Flat-Plat-dark-compact
-Comment=A Material Design-like theme
+Name=Equilux-compact
+Comment=A Material Design-like theme with Equilux color-palette
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Flat-Plat-dark-compact
-MetacityTheme=Flat-Plat-dark-compact
+GtkTheme=Equilux-compact
+MetacityTheme=Equilux-compact
 IconTheme=Adwaita
 CursorTheme=Adwaita
 CursorSize=24
