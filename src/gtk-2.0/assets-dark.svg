@@ -7,55 +7,55 @@
 
   <defs>
     <linearGradient id="color-fg">
-      <stop stop-color="#FFFFFF"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-fg-disabled">
-      <stop stop-color="#FFFFFF" stop-opacity="0.5"/>
+      <stop stop-color="#bebebe" stop-opacity="0.5"/>
     </linearGradient>
 
     <linearGradient id="color-fg-secondary">
-      <stop stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop stop-color="#bebebe" stop-opacity="0.7"/>
     </linearGradient>
 
     <linearGradient id="color-fg-secondary-disabled">
-      <stop stop-color="#FFFFFF" stop-opacity="0.3"/>
+      <stop stop-color="#bebebe" stop-opacity="0.3"/>
     </linearGradient>
 
     <linearGradient id="color-divider">
-      <stop stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop stop-color="#bebebe" stop-opacity="0.12"/>
     </linearGradient>
 
     <linearGradient id="color-primary">
-      <stop stop-color="#338DD6"/>
+      <stop stop-color="#5a5a5a"/>
     </linearGradient>
 
     <linearGradient id="color-accent">
-      <stop stop-color="#009688"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-accent-insensitive">
-      <stop stop-color="#009688" stop-opacity="0.5"/>
+      <stop stop-color="#bebebe" stop-opacity="0.5"/>
     </linearGradient>
 
     <linearGradient id="color-bg">
-      <stop stop-color="#212121"/>
+      <stop stop-color="#373737"/>
     </linearGradient>
 
     <linearGradient id="color-bg-lighter">
-      <stop stop-color="#424242"/>
+      <stop stop-color="#464646"/>
     </linearGradient>
 
     <linearGradient id="color-base">
-      <stop stop-color="#303030"/>
+      <stop stop-color="#414141"/>
     </linearGradient>
 
     <linearGradient id="color-base-alt">
-      <stop stop-color="#292929"/>
+      <stop stop-color="#3c3c3c"/>
     </linearGradient>
 
     <linearGradient id="color-border">
-      <stop stop-color="#000000" stop-opacity="0.26"/>
+      <stop stop-color="#000000" stop-opacity="0.2"/>
     </linearGradient>
 
     <linearGradient id="color-fg-level-bar">
