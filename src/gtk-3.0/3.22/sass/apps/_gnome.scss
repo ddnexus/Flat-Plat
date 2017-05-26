@@ -140,21 +140,21 @@ dialog.background > box.dialog-vbox.vertical > grid.horizontal {
 }
 
 // Tweak to fix the messy sizing of the popover menu
-.nautilus-window > popover.menu:not(:last-child) {
-  padding: 3px;
-
-  > stack > box > box > box {
-    margin-top: -6px;
-
-    > box {
-      margin-bottom: -6px;
-
-      &.linked { margin-top: 1px; }
-    }
-  }
-
-  separator { margin-bottom: -2px; }
-}
+// .nautilus-window > popover.menu:not(:last-child) {
+//   padding: 3px;
+//
+//   > stack > box > box > box {
+//     margin-top: -6px;
+//
+//     > box {
+//       margin-bottom: -6px;
+//
+//       &.linked { margin-top: 1px; }
+//     }
+//   }
+//
+//   separator { margin-bottom: -2px; }
+// }
 
 .nautilus-menu-sort-heading {
   // min-height: 26px;
