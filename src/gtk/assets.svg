@@ -43,11 +43,11 @@
     </linearGradient>
 
     <linearGradient id="color-accent">
-      <stop stop-color="#009688"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-accent-disabled">
-      <stop stop-color="#009688" stop-opacity="0.5"/>
+      <stop stop-color="#bebebe" stop-opacity="0.5"/>
     </linearGradient>
 
     <linearGradient id="color-bg">
@@ -55,7 +55,7 @@
     </linearGradient>
 
     <linearGradient id="color-bg-dark">
-      <stop stop-color="#212121"/>
+      <stop stop-color="#323232"/>
     </linearGradient>
 
     <linearGradient id="color-bg-lighter">
@@ -63,7 +63,7 @@
     </linearGradient>
 
     <linearGradient id="color-bg-lighter-dark">
-      <stop stop-color="#424242"/>
+      <stop stop-color="#414141"/>
     </linearGradient>
 
     <linearGradient id="color-base">
@@ -71,7 +71,7 @@
     </linearGradient>
 
     <linearGradient id="color-base-dark">
-      <stop stop-color="#303030"/>
+      <stop stop-color="#3C3C3C"/>
     </linearGradient>
 
     <filter id="1" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
