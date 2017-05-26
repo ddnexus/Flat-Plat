@@ -24,31 +24,31 @@
     </filter>
 
     <linearGradient id="color-fg">
-      <stop stop-color="#FFFFFF"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-primary">
-      <stop stop-color="#42A5F5"/>
+      <stop stop-color="#5a5a5a"/>
     </linearGradient>
 
     <linearGradient id="color-accent">
-      <stop stop-color="#FF4081"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-bg">
-      <stop stop-color="#44545c"/>
+      <stop stop-color="#373737"/>
     </linearGradient>
 
     <linearGradient id="color-bg-lighter">
-      <stop stop-color="#596e79"/>
+      <stop stop-color="#464646"/>
     </linearGradient>
 
     <linearGradient id="color-base">
-      <stop stop-color="#50636c"/>
+      <stop stop-color="#414141"/>
     </linearGradient>
 
     <linearGradient id="color-base-alt">
-      <stop stop-color="#4a5c64"/>
+      <stop stop-color="#3c3c3c"/>
     </linearGradient>
 
     <linearGradient id="color-border">
