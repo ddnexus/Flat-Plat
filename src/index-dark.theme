@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Flat-Plat-dark
-Comment=A Material Design-like theme
+Name=Flat-Plat-Equilux
+Comment=A Material Design-like theme with Equilux color-palette
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Flat-Plat-dark
-MetacityTheme=Flat-Plat-dark
+GtkTheme=Flat-Plat-Equilux
+MetacityTheme=Flat-Plat-Equilux
