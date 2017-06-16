@@ -20,11 +20,11 @@ fi
 
 echo
 
-for color in '' '-dark' '-light' ; do
+for color in '-dark' ; do
   for size in '' '-compact' ; do
-    echo Installing Flat-Plat${color}${size} ...
+    echo Installing Equilux${size} ...
 
-    themedir=${destdir}/usr/share/themes/Flat-Plat${color}${size}
+    themedir=${destdir}/usr/share/themes/Equilux${size}
     install -d ${themedir}
 
     # Copy COPYING
@@ -38,22 +38,6 @@ for color in '' '-dark' '-light' ; do
     cp -ur \
       index${color}${size}.theme \
       ${themedir}/index.theme
-
-    # Install Chrome Theme/Extention
-    install -d ${themedir}/chrome
-    cd ${srcdir}/chrome
-    cp -ur \
-      "Flat-Plat${color} Theme.crx" \
-      ${themedir}/chrome
-    if [ "$color" != '-dark' ] ; then
-      cp -ur \
-        "Flat-Plat Scrollbars.crx" \
-        ${themedir}/chrome
-    else
-      cp -ur \
-        "Flat-Plat${color} Scrollbars.crx" \
-        ${themedir}/chrome
-    fi
 
     # Install GNOME Shell Theme
     install -d ${themedir}/gnome-shell
