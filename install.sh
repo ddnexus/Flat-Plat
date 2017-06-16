@@ -5,7 +5,7 @@ set -ueo pipefail
 repodir=$(cd $(dirname $0) && pwd)
 srcdir=${repodir}/src
 
-themedir_base_fallback=${destdir:-}/usr/share/themes/Materia
+themedir_base_fallback=${destdir:-}/usr/share/themes/Equilux
 themedir_base=${THEME_DIR_BASE:-$themedir_base_fallback}
 
 if [[ $(which gnome-shell 2> /dev/null) ]]; then
@@ -26,9 +26,7 @@ else
 fi
 
 _COLOR_VARIANTS=(
-  ''
   '-dark'
-  '-light'
 )
 if [ ! -z "${COLOR_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
@@ -46,9 +44,9 @@ echo
 
 for color in "${_COLOR_VARIANTS[@]}"; do
   for size in "${_SIZE_VARIANTS[@]}"; do
-    echo Installing Materia${color}${size} ...
+    echo Installing Equilux${size} ...
 
-    themedir=${themedir_base}${color}${size}
+    themedir=${themedir_base}${size}
     if [[ -d ${themedir} ]]; then
       rm -r ${themedir}
     fi
@@ -65,22 +63,6 @@ for color in "${_COLOR_VARIANTS[@]}"; do
     cp -ur \
       index${color}${size}.theme \
       ${themedir}/index.theme
-
-    # Install Chrome Theme/Extention
-    install -d ${themedir}/chrome
-    cd ${srcdir}/chrome
-    cp -ur \
-      "Materia${color} Theme.crx" \
-      ${themedir}/chrome
-    if [ "$color" != '-dark' ]; then
-      cp -ur \
-        "Materia Scrollbars.crx" \
-        ${themedir}/chrome
-    else
-      cp -ur \
-        "Materia${color} Scrollbars.crx" \
-        ${themedir}/chrome
-    fi
 
     # Install GNOME Shell Theme
     install -d ${themedir}/gnome-shell
