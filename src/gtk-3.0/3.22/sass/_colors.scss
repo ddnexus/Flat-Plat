@@ -99,3 +99,6 @@ $opaque_divider_color:                 mix($e190, $base_color, percentage(0.12))
 // FIXME: gtk's @placeholder_text_color API really should use $secondary_fg_color,
 // but it doesn't work with translucent colors. So we use opaque colors instead.
 $placeholder_text_color:               mix($white, $base_color, percentage(0.7));
+
+$level_bar_fg_color:                   $e190;
+$level_bar_bg_color:                   rgba($e190, 0.3);
