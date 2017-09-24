@@ -1,79 +1,43 @@
-Flat-Plat
-=========
-Flat-Plat is a [Material Design](https://material.io)-like theme for GNOME/GTK+ based desktop environments.  
-It supports GTK+ 3, GTK+ 2, GNOME Shell, Budgie, MATE, Unity, LightDM, GDM, Chrome theme, etc.
+# Equilux Theme
 
-Also Flat-Plat has compatibility with [oomox](https://github.com/actionless/oomox).
+![Screenshot](screenshot.png)
 
-Features
---------
-<img src="../images/Button.gif" alt="Button" align="right"/>
+The Equilux Theme provides a couple of full-dark, neutral-gray themes (for GTK2, GTK3, Shell, and GDM) using the Equilux palette.
 
-- Supports ripple effect animations for GTK+ 3.
-- Supports both light and dark variants.
-- Supports dark and light titlebar variants.
-- Supports compact variant for low resolution.
+It is based on the [Flat-Plat](https://github.com/nana-4/Flat-Plat) theme. For detailed features and documentation, please, check the [Flat-Plat](https://github.com/nana-4/Flat-Plat) theme.
 
-Requirements
-------------
-- GTK+ `>=3.18`
-- `gnome-themes-standard`
-- murrine engine
+### Motivation
 
-#### Supported desktop environments
-- GNOME Shell `>=3.18`
-- Budgie `>=10.2.5`
-- MATE `>=1.14`
-- Unity `>=7.4`
+If you ever worked with photos and graphics, you know how - a now trendy - bluish/greenish or otherwise colored UI gets in the way of professional results.
 
-#### Build dependency
-- `glib2` on Arch Linux
-- `glib2-devel` on Fedora, openSUSE, etc
-- `libglib2.0-dev` on Debian, Ubuntu, etc
+The Equilux themes provide a neutral dark-balanced color-scheme especially useful for professional use in image editing, graphic design, 3D rendering, ... where any color cast or excessive contrast, brightness or darkness introduced by the UI would affect the overall perception of the color and brightness balance of the images.
 
-Installation
-------------
-For **Arch Linux**, the [AUR package](https://aur.archlinux.org/packages/flatplat-theme) maintained by @cthbleachbit is available.
+Besides, a dark-balanced color-scheme helps to minimize the eye strain when you pass many hours in front of the screen, and a neutral color-cast-free UI helps to avoid disrupting your circadian rhythms and sleep better, working nicely with software like `f.lux`, `redshift`, `NightLight`, ...
 
-```sh
-sudo yaourt -S flatplat-theme
-```
+The Equilux Theme sticks to the base theme as much as possible, and is exclusively focused on the following points:
 
-For **Fedora** or **EPEL**, the [Copr repository](https://copr.fedorainfracloud.org/coprs/tcg/themes/) maintained by @LaurentTreguier is available.
+- Total removal of any color cast from the background elements (neutral base)
+- Use of a neutral base for all the UI elements, with exception of a few button/boxes
+- Maximum reduction of contrast/saturation and number of elements (minimalistic UI)
+- Medium overall brightness/darkness of the UI
 
-```sh
-sudo dnf copr enable tcg/themes
-sudo dnf install Flat-Plat-theme
-```
+### Changes from the base theme
 
-#### Manual Installation
-Run the following commands in the terminal.
+- The installer script installs only the Equilux variants
+- The Chrome extension is not supported
+- Addition of Ubuntu font family preference
+- Addition of a few utility script handy to use in development/hacking
+- Minimal changes in the color assignations in order to make the Equilux palette work OK with the theme.
 
-```sh
-cd /tmp && curl -sL https://github.com/nana-4/Flat-Plat/archive/v20170917.tar.gz | tar xz
-cd Flat-Plat-20170917
-sudo ./install.sh
-```
+## Theme Installation/Uninstallation
 
-#### Manual Uninstallation
-Delete the installed directories.
+**Installation**: Download the latest `equilux-theme-*.tar.gz` version listed in the [Releases](https://github.com/ddnexus/equilux-theme/releases), unzip it and move the content to `/usr/share/themes`.
 
-```sh
-sudo rm -rf /usr/share/themes/Flat-Plat{,-compact,-dark,-dark-compact,-light,-light-compact}
-```
+**Uninstallation**: Delete the installed directories: `sudo rm -rf /usr/share/themes/Equilux{,-compact}`
 
-Recommendations
----------------
-#### Font
-- To properly display the theme, use a font family including `Medium` weight (like [Roboto](https://github.com/google/roboto) or [M+](https://mplus-fonts.osdn.jp)).
-- Set the font size to `9.75` (= 13px at 96dpi) or `10.5` (= 14px at 96dpi).
+## GDM Theme Installation/Uninstallation
 
-#### Chrome Theme
-To use the Chrome theme, open the `chrome` folder on `/usr/share/themes/Flat-Plat<-variant>` and drag and drop the `.crx` files onto the Chrome/Chromium _Extensions_ page.
-
-GDM Theme
----------
-You can change the GDM (lock/login screen) theme by replacing the default GNOME Shell theme.  
+You can change the GDM theme (a.k.a. lock/login screen) by replacing the default GNOME Shell theme.  
 However, if it fails, the desktop environment may not operate correctly. So please **be careful** if doing this.
 
 #### :warning: Cautions:
@@ -102,39 +66,17 @@ However, if it fails, the desktop environment may not operate correctly. So plea
 
 2. Restart GNOME Shell. (If you are running _GNOME on Xorg_, press <kbd>Alt</kbd> + <kbd>F2</kbd> then type `r`.)
 
-Preview
--------
-##### GNOME Shell
-![GNOME Shell](../images/gnome.png?raw=true)
-##### Budgie Desktop
-![Budgie Desktop](../images/budgie.png?raw=true)
-##### GDM
-![GDM](../images/gdm-unlock.png?raw=true)
-<sub>**Preview Details:** Icons: [Paper](https://github.com/snwh/paper-icon-theme) | Font: [M+ 1C](https://mplus-fonts.osdn.jp) 9.75pt | Dock's icon size: 48px + fixed | [Wallpapers](http://imgur.com/a/v2Ovx)</sub>
 
-Planned Features
-----------------
-- Supports of Xfce theme (waiting for the upstream to complete `gtk3` port)
-- Supports of Firefox theme ([in progress](https://github.com/nana-4/Flat-Plat/issues/78), waiting for [the upstream to provide next-gen themes](https://blog.mozilla.org/addons/2017/02/24/improving-themes-in-firefox/))
-- Supports of overlay scrollbars for Chrome/Chromium extension (low priority)
-- GNOME Terminal color palette (if possible, _help wanted_)
-- Material Design like cursor theme (low priority)
+### Branches
 
-Contributing
-------------
-If you find bugs or have suggestions, please report it to the [issue tracker](https://github.com/nana-4/Flat-Plat/issues).  
-Any contribution will be much appreciated.
+Master is always the upstream master: no changes from the base theme there.
+The `equilux-*` branch(es) are the branches with the changes from the upstream master.
+Please, notice that the `*-dev` branches may get rebased on top of master. The old versions will be tagged and will not be removed/rebased.
 
-License
--------
-Flat-Plat is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
+## License
 
-Credits
--------
-- This theme is based on [Adwaita](HACKING.md#useful-links) by GNOME.
-- The included symbolic icons are based on [Material Design icons](https://github.com/google/material-design-icons) by Google.
-- Chrome/Chromium scrollbars extension was forked from [Adwaita-chrome-scrollbar](https://github.com/gnome-integration-team/chrome-gnome-scrollbar) by GNOME Integration Team.
-- The original concept is Google's [Material Design](https://material.io).
-- Yauhen Kirylau (@actionless) who is oomox author polished scripts and supported Flat-Plat with [oomox](https://github.com/actionless/oomox).
+The Equilux Theme is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
 
-Also thank you for all contributors and upstream developers.
+## Credits
+
+- All credits go to the [Flat-Plat](https://github.com/nana-4/Flat-Plat) theme.
