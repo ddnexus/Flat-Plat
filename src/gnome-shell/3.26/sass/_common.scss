@@ -665,11 +665,11 @@ StScrollBar {
   .level {
     height: 0.6em;
     border-radius: 4px;
-    background-color: $divider_color;
+    background-color: $level_bar_bg_color;
     color: $fg_color;
   }
   .level-bar {
-    background-color: $primary_color;
+    background-color: $level_bar_fg_color;
     border-radius: 2px;
   }
 }
