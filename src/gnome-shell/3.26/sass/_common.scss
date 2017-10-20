@@ -2126,8 +2126,8 @@ StScrollBar {
 }
 
 #lockDialogGroup {
-  background: $gdm_bg_color;
-  background-size: cover;
+  background: $base_color url("resource:///org/gnome/shell/theme/assets/noise-texture.png");
+  background-repeat: repeat;
 }
 
 #screenShieldNotifications {
