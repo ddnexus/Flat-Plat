@@ -1682,7 +1682,7 @@ notebook {
         > tab {
           box-shadow: inset 0 -2px transparent;
 
-          &:checked { box-shadow: inset 0 -2px $primary_color; }
+          &:checked { box-shadow: inset 0 -2px $secondary_color; }
         }
       }
     }
@@ -1696,7 +1696,7 @@ notebook {
         > tab {
           box-shadow: inset 0 2px transparent;
 
-          &:checked { box-shadow: inset 0 2px $primary_color; }
+          &:checked { box-shadow: inset 0 2px $secondary_color; }
         }
       }
     }
@@ -1710,7 +1710,7 @@ notebook {
         > tab {
           box-shadow: inset -2px 0 transparent;
 
-          &:checked { box-shadow: inset -2px 0 $primary_color; }
+          &:checked { box-shadow: inset -2px 0 $secondary_color; }
         }
       }
     }
@@ -1724,7 +1724,7 @@ notebook {
         > tab {
           box-shadow: inset 2px 0 transparent;
 
-          &:checked { box-shadow: inset 2px 0 $primary_color; }
+          &:checked { box-shadow: inset 2px 0 $secondary_color; }
         }
       }
     }
@@ -2631,7 +2631,7 @@ levelbar {
     &.low { background-color: $warning_color; }
 
     &.high,
-    &:not(.empty) { background-color: $accent_color; }
+    &:not(.empty) { background-color: $secondary_color; }
 
     &.full { background-color: $success_color; }
 

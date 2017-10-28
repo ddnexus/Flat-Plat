@@ -1181,16 +1181,16 @@ column-header.button.dnd { // for treeview-like derive widgets
     &:hover, &.prelight-page { background-color: $semi_fill_color; }
     &:active, &.active-page { background-color: transparent; }
     &.top {
-      &:active, &.active-page { box-shadow: inset 0 -2px $primary_color; }
+      &:active, &.active-page { box-shadow: inset 0 -2px $secondary_color; }
     }
     &.bottom {
-      &:active, &.active-page { box-shadow: inset 0 2px $primary_color; }
+      &:active, &.active-page { box-shadow: inset 0 2px $secondary_color; }
     }
     &.left {
-      &:active, &.active-page { box-shadow: inset -2px 0 $primary_color; }
+      &:active, &.active-page { box-shadow: inset -2px 0 $secondary_color; }
     }
     &.right {
-      &:active, &.active-page { box-shadow: inset 2px 0 $primary_color; }
+      &:active, &.active-page { box-shadow: inset 2px 0 $secondary_color; }
     }
     &.reorderable-page {
       &:active, &.active-page {
