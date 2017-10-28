@@ -1667,7 +1667,7 @@ notebook {
 
           &:hover { box-shadow: inset 0 -2px $track_color; }
 
-          &:checked { box-shadow: inset 0 -2px $primary_color; }
+          &:checked { box-shadow: inset 0 -2px $accent_color; }
         }
       }
     }
@@ -1680,7 +1680,7 @@ notebook {
 
           &:hover { box-shadow: inset 0 2px $track_color; }
 
-          &:checked { box-shadow: inset 0 2px $primary_color; }
+          &:checked { box-shadow: inset 0 2px $accent_color; }
         }
       }
     }
@@ -1693,7 +1693,7 @@ notebook {
 
           &:hover { box-shadow: inset -2px 0 $track_color; }
 
-          &:checked { box-shadow: inset -2px 0 $primary_color; }
+          &:checked { box-shadow: inset -2px 0 $accent_color; }
         }
       }
     }
@@ -1706,7 +1706,7 @@ notebook {
 
           &:hover { box-shadow: inset 2px 0 $track_color; }
 
-          &:checked { box-shadow: inset 2px 0 $primary_color; }
+          &:checked { box-shadow: inset 2px 0 $accent_color; }
         }
       }
     }
