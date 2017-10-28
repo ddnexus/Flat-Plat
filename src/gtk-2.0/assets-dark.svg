@@ -414,7 +414,7 @@
 
     <use xlink:href="#1x1" id="base-border" fill="url(#color-border)"/>
 
-    <use xlink:href="#1x1" id="base-tab" fill="url(#color-primary)"/>
+    <use xlink:href="#1x1" id="base-tab" fill="url(#color-accent)"/>
 
     <use xlink:href="#4x4" id="base-progressbar-progress" fill="url(#color-fg-level-bar)"/>
 
