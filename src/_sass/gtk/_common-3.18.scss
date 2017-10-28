@@ -1171,19 +1171,19 @@ column-header.button.dnd { // for treeview-like derive widgets
     }
     &.top {
       &:hover, &.prelight-page { box-shadow: inset 0 -2px $fill_color; }
-      &:active, &.active-page { box-shadow: inset 0 -2px $primary_color; }
+      &:active, &.active-page { box-shadow: inset 0 -2px $accent_color; }
     }
     &.bottom {
       &:hover, &.prelight-page { box-shadow: inset 0 2px $fill_color; }
-      &:active, &.active-page { box-shadow: inset 0 2px $primary_color; }
+      &:active, &.active-page { box-shadow: inset 0 2px $accent_color; }
     }
     &.left {
       &:hover, &.prelight-page { box-shadow: inset -2px 0 $fill_color; }
-      &:active, &.active-page { box-shadow: inset -2px 0 $primary_color; }
+      &:active, &.active-page { box-shadow: inset -2px 0 $accent_color; }
     }
     &.right {
       &:hover, &.prelight-page { box-shadow: inset 2px 0 $fill_color; }
-      &:active, &.active-page { box-shadow: inset 2px 0 $primary_color; }
+      &:active, &.active-page { box-shadow: inset 2px 0 $accent_color; }
     }
     @each $_tab, $_border in (top, bottom),
                              (bottom, top),
