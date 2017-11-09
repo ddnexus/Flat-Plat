@@ -1,126 +1,98 @@
-# Materia
+# Equilux Theme
 
-Materia (formerly Flat-Plat) is a [Material Design](https://material.io) theme for GNOME/GTK+ based desktop environments.  
-It supports GTK+ 3, GTK+ 2, GNOME Shell, Budgie, MATE, Unity, LightDM, GDM, Chrome theme, etc.
+![Screenshot](screenshot.png)
 
-Also Materia has compatibility with [oomox theme designer](https://github.com/actionless/oomox).
+The Equilux Theme provides a couple of full-dark, neutral-gray themes (for GTK2, GTK3, Shell, and GDM) using the Equilux palette.
 
-## Features
+It is based on the [Materia Theme](https://github.com/nana-4/materia-theme). For detailed features and documentation, please, check the [Materia Theme](https://github.com/nana-4/materia-theme) theme.
 
-**Ripple effect** animations for GTK+ 3 are supported.
+### Motivation
 
-![Button](../images/Button.gif?raw=true)
+If you ever worked with photos and graphics, you know how - a now trendy - bluish/greenish or otherwise colored UI gets in the way of professional results.
 
-**Three color variants** and **two size variants** are available.
+The Equilux themes provide a neutral dark-balanced color-scheme especially useful for professional use in image editing, graphic design, 3D rendering, ...  In that fields any color cast or excessive contrast, brightness or darkness introduced by the UI would affect the overall perception of the color and brightness balance of the images.
 
-| **Materia** | **-** | **compact** |
-|:-:|:-:|:-:|
-| **-** | ![Materia](../images/Materia.png?raw=true) | ![Materia-compact](../images/Materia-compact.png?raw=true) |
-| **dark** | ![Materia-dark](../images/Materia-dark.png?raw=true) | ![Materia-dark-compact](../images/Materia-dark-compact.png?raw=true) |
-| **light** | ![Materia-light](../images/Materia-light.png?raw=true) | ![Materia-light-compact](../images/Materia-light-compact.png?raw=true) |
+Besides, a dark-balanced color-scheme helps to minimize the eye strain when you pass many hours in front of the screen. A neutral color-cast-free UI helps to avoid disrupting your circadian rhythms and sleep better, working nicely with software like `f.lux`, `redshift`, `NightLight`, ...
 
-Various **desktop environments** are supported.
+The Equilux Theme sticks to the base theme as much as possible, and is exclusively focused on the following points:
 
-- GNOME Shell `>=3.18`
-- Budgie `>=10.2.5`
-- MATE `>=1.14`
-- Unity `>=7.4`
-- ... and more DEs are [planned](TODO.md#supports).
+- Total removal of any color cast from the background elements (neutral base)
+- Use of a neutral base for all the UI elements, with exception of a few button/boxes
+- Maximum reduction of contrast/saturation and number of elements (minimalistic UI)
+- Medium overall brightness/darkness of the UI
 
-## Installation
+### Changes from the base theme
 
-#### Packages
+- The installer script installs only the Equilux variants
+- The Chrome extension is not supported
+- Addition of Ubuntu font family preference
+- Addition of a few utility script handy to use in development/hacking
+- A few minor cosmetic fixes
+- Minimal changes in the color assignations in order to make the Equilux palette work OK with the theme.
 
-|| **Install command** |
-|:-|:-|
-| **Arch Linux** [1] | `yaourt -S materia-theme` |
-| **Fedora / EPEL** [2] | `sudo dnf copr enable tcg/themes && sudo dnf install materia-theme` |
+## Theme Installation/Uninstallation
 
-1. The [AUR package](https://aur.archlinux.org/packages/materia-theme/) is maintained by [@cthbleachbit](https://github.com/cthbleachbit).
-2. The [Copr repository](https://copr.fedorainfracloud.org/coprs/tcg/themes/) is maintained by [@LaurentTreguier](https://github.com/LaurentTreguier).
+**Installation**: Download the latest `equilux-theme-*.tar.gz` version listed in the [Releases](https://github.com/ddnexus/equilux-theme/releases), unzip it and move the content to `/usr/share/themes`.
 
-#### Manual Installation
+**Uninstallation**: Delete the installed directories: `sudo rm -rf /usr/share/themes/Equilux{,-compact}`
 
-Check the dependencies first:
+## GDM Theme Installation/Uninstallation
 
-- GTK+ `>=3.18`
-- `gnome-themes-standard`
-- Murrine engine - The package name depends on the distro.
-  - `gtk-engine-murrine` on Arch Linux
-  - `gtk-murrine-engine` on Fedora
-  - `gtk2-engine-murrine` on openSUSE
-  - `gtk2-engines-murrine` on Debian, Ubuntu, etc.
-- `glib-compile-resources` - The package name depends on the distro.
-  - `glib2` on Arch Linux
-  - `glib2-devel` on Fedora, openSUSE, etc.
-  - `libglib2.0-dev` on Debian, Ubuntu, etc.
+You can change the GDM theme (a.k.a. lock/login screen) by replacing the default GNOME Shell theme.  
+However, if it fails, the desktop environment may not operate correctly. So please **be careful** if doing this.
 
-Did you get the error: `XMLLINT not set and xmllint not found in path`? Then you'll also need to install `libxml2-utils`.
+#### :warning: Cautions:
+- When applying this, other third-party GNOME Shell themes would look broken until you restore to the original theme.
+- If GNOME Shell has been updated, it will be restored to the original theme, so you will need to do this again.
 
-Install the theme with the following commands:
+### Installation
 
-```sh
-cd /tmp && curl -sL https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
-cd materia-theme-master
-sudo ./install.sh
-```
+1. Activate the Equilux Theme variant you want to install
 
-#### Manual Uninstallation
+2. Run the following commands:
 
-Delete the installed directories:
+  ```sh
+    GTK_THEME=$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")
+    sudo ln -svb /usr/share{/themes/$GTK_THEME,}/gnome-shell/gnome-shell-theme.gresource
+  ```
 
-```sh
-sudo rm -rf /usr/share/themes/{Materia,Flat-Plat}{,-compact,-dark,-dark-compact,-light,-light-compact}
-```
+3. Extra step needed only for the GNOME Shell v3.26
 
-## Recommendations
+  ```sh
+    GTK_THEME=$(gsettings get org.gnome.desktop.interface gtk-theme | sed "s/'//g")
+    sudo ln -svb /usr/share/themes/$GTK_THEME/gnome-shell/gnome-shell.css /etc/alternatives/gdm3.css
+  ```
 
-#### Font
+4. Restart the GNOME Shell. (If you are running _GNOME on Xorg_, press <kbd>Alt</kbd> + <kbd>F2</kbd> then type `r`.)
 
-- To properly display the theme, use a font family including `Medium` weight (such as [Roboto](https://github.com/google/roboto) or [M+](https://mplus-fonts.osdn.jp)).
-- Set the font size to `9.75` (= 13px at 96dpi) or `10.5` (= 14px at 96dpi).
+**Notice**: step #2 and #3 backup the original file and create a symlink to the theme file in its place. Remove the `-b` flag if you already have the backup.
 
-#### Chrome Theme
+### Uninstallation
 
-To use the Chrome theme;
+1. Restore the original theme from the backup (rename the backup gresource file and overwrite the link):
 
-1. Open the `chrome` folder on `/usr/share/themes/Materia<-variant>`.
-2. Drag and drop the `.crx` files onto the Chrome/Chromium Extensions page: `chrome://extensions`
+  ```sh
+    sudo mv -v /usr/share/gnome-shell/gnome-shell-theme.gresource{~,}
+  ```
 
-#### GDM Theme
+2. Extra step needed only for the GNOME Shell v3.26 (rename the css file and overwrite the link)
 
-You can change the GDM (lock/login screen) theme by replacing the default GNOME Shell theme.  
-See the wiki for details: https://github.com/nana-4/materia-theme/wiki/GDM-Theme
+  ```sh
+    sudo mv -v /etc/alternatives/gdm3.css{~,}
+  ```
+3. Restart the GNOME Shell. (If you are running _GNOME on Xorg_, press <kbd>Alt</kbd> + <kbd>F2</kbd> then type `r`.)
 
-## Previews
 
-##### GNOME Shell
-![GNOME Shell](../images/gnome.png?raw=true)
+### Branches
 
-##### Budgie Desktop
-![Budgie Desktop](../images/budgie.png?raw=true)
-
-##### GDM
-![GDM](../images/gdm-unlock.png?raw=true)
-
-<sub>**Previews Info:** Icon Theme: [Paper](https://github.com/snwh/paper-icon-theme) | Font: [M+ 1C](https://mplus-fonts.osdn.jp) 9.75pt | Dock's icon size: 48px + fixed | [Wallpapers](https://imgur.com/a/v2Ovx)</sub>
-
-## Contributing
-
-If you find bugs or have suggestions, please report it to the [issue tracker](https://github.com/nana-4/materia-theme/issues). Any contribution would be much appreciated.
-
-See also (if necessary): [`TODO.md`](TODO.md) and [`HACKING.md`](HACKING.md)
+Master is always the upstream master: no changes from the base theme there.
+The `equilux-*` branch(es) are the branches with the changes from the upstream master.
+Please, notice that the `*-dev` branches may get rebased on top of master. The old versions will be tagged and will not be removed/rebased.
 
 ## License
 
-Materia is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
+The Equilux Theme is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
 
 ## Credits
 
-- This theme is based on [Adwaita](HACKING.md#upstream-theme-sources) by GNOME.
-- The included symbolic icons are based on [Material Design icons](https://github.com/google/material-design-icons) by Google.
-- Chrome/Chromium scrollbars extension was forked from [Adwaita-chrome-scrollbar](https://github.com/gnome-integration-team/chrome-gnome-scrollbar) by GNOME Integration Team.
-- The original concept is Google's [Material Design](https://material.io).
-- Yauhen Kirylau (@actionless) who is oomox author polished scripts and supported Materia with [oomox](https://github.com/actionless/oomox).
-
-Also thank you to all contributors and upstream developers.
+- All credits go to the [Materia Theme](https://github.com/nana-4/materia-theme).
