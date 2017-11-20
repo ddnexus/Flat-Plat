@@ -79,7 +79,7 @@ EelEditableLabel.entry { transition: none; }
 }
 
 .disk-space-display.unknown {
-  background-color: $warning_color;
+  background-color: $warning_bg_color;
 }
 
 .disk-space-display.used {
