@@ -833,7 +833,7 @@ StScrollBar {
 
 #panel {
   background-color: $panel_bg_color;
-  font-weight: bold;
+  /*font-weight: bold;*/
   height: $menuitem_size;
 
   &:overview,

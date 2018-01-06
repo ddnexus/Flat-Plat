@@ -86,7 +86,7 @@ Examples:
 }
 
 stage {
-  font-family: "M+ 1c", Roboto, Ubuntu, Cantarell, Sans-Serif;
+  font-family: "M+ 1c", Ubuntu, Roboto, Cantarell, Sans-Serif;
   font-size: 10.5pt;
   font-weight: 400;
   color: #bebebe;
@@ -1058,7 +1058,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
   background-color: rgba(0, 0, 0, 0.6);
   /* transition from solid to transparent */
   transition-duration: 250ms;
-  font-weight: bold;
+  /*font-weight: bold;*/
   height: 32px;
 }
 
