@@ -86,7 +86,7 @@ Examples:
 }
 
 stage {
-  font-family: "M+ 1c", Roboto, Ubuntu, Cantarell, Sans-Serif;
+  font-family: "M+ 1c", Ubuntu, Roboto, Cantarell, Sans-Serif;
   font-size: 9.75pt;
   font-weight: 400;
   color: #bebebe;
@@ -1069,7 +1069,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 /* TOP BAR */
 #panel {
   background-color: #262626;
-  font-weight: bold;
+  /*font-weight: bold;*/
   height: 28px;
 }
 

@@ -811,7 +811,7 @@ StScrollBar {
   background-color: $bg_color;
   /* transition from solid to transparent */
   transition-duration: 250ms;
-  font-weight: bold;
+  /*font-weight: bold;*/
   height: $menuitem_size;
 
   &:overview,
