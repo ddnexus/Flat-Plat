@@ -5,7 +5,7 @@
 The Equilux Theme provides a couple of full-dark, neutral-gray themes (for GTK2, GTK3, Shell, and GDM) using the Equilux palette.
 
 It is based on the [Materia Theme](https://github.com/nana-4/materia-theme). For detailed features and documentation, please, check upstream.
-                                                                                                                            app
+                                                                                                                            
 ### Motivation
 
 The Equilux themes provide a neutral dark-balanced color-scheme not designed to be __fancy__, but to be __useful__ for a few specific goals.
@@ -16,7 +16,7 @@ The Equilux themes provide a neutral dark-balanced color-scheme not designed to 
 
 3. __Professional use in image editing, graphic design, 3D rendering__: in that fields any color cast or excessive contrast, brightness or darkness introduced by the UI would affect the overall perception of the color and balance of the images
 
-4. __You may find it stylish__: even if the style is not the main goal, many people find that its very clean and minimalistic UI looks cool and professional
+4. __You may just like it__: even if the style is not the main goal, many people find that its very clean and minimalistic UI looks cool and professional
 
 
 ### Technical Focus
@@ -45,11 +45,29 @@ The Equilux Theme sticks to the upstream theme as much as possible, and is exclu
 
 ## Font Customization
 
-After you install the themes, you may want to customize the fonts by replacing their names inside the installed CSS file. Here is the command to run (courtesy of nana-4). Just remember to edit the "your-preferred-font" string :).
+After you install the themes, you may want to customize the fonts by editing the `font-family` CSS rule inside the installed CSS file(s) `/usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css`.
+
+Here is the current line that affects the fonts:
 
 ```
-    sudo sed -i 's/Ubuntu, Roboto/your-preferred-font/g' /usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css
+font-family: Roboto, Ubuntu, Cantarell, Sans-Serif;
+``` 
+
+You can edit it manually with any text-editor, or you can run a simple command (courtesy of nana-4). Just remember to edit the "your-preferred-font" string :).
+
+For example: prepending `your-preferred-font`:
+
 ```
+sudo sed -i 's/Roboto/your-preferred-font, Roboto/g' /usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css
+```
+
+or switching priority between `Roboto` and `Ubuntu`:
+
+```
+sudo sed -i 's/Roboto, Ubuntu/Ubuntu, Roboto/g' /usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css
+```
+
+or change it as you prefer.
 
 ## GDM Theme Installation/Uninstallation
 
@@ -57,7 +75,7 @@ See the the upstream instruction [here](https://github.com/nana-4/materia-theme/
 
 ## Related Items
 
-A quick list of items that - for different reasaons - fit well with the Equilux style and concept. Please, submit your suggestions as a new Issue, so I will add a note in this section.
+A quick list of items that - for different reasons - fit well with the Equilux style and concept. Please, submit your suggestions as a new Issue, so I will add a note in this section.
 
 ### Wallpapers
 
@@ -84,6 +102,8 @@ Seamless textures from various sources and authors, converted to low contrast/br
 - [Equilux-Telegram](https://github.com/aquatix/Equilux-Telegram-Theme)
 
 - [Equilux-Flubox](https://www.opendesktop.org/p/1193958/) 
+
+- [HexChat](https://dl.hexchat.net/themes/Zenburn.hct): the Zenburn theme fits well with Equilux
 
 - TBD: add the style settings consistent with the Equilux Palette for apps like Vivaldi, Tilix, RubyMine, SmartGit, DeepGit, ... 
 
