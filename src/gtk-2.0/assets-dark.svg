@@ -58,6 +58,11 @@
       <stop stop-color="#000000" stop-opacity="0.26"/>
     </linearGradient>
 
+    <linearGradient id="color-fg-level-bar">
+      <stop stop-color="#bebebe"/>
+    </linearGradient>
+
+
     <filter id="1" color-interpolation-filters="sRGB" x="0" y="0" width="1" height="1">
       <!-- <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000000" flood-opacity="0.12"/> -->
       <!-- <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000000" flood-opacity="0.24"/> -->
@@ -411,7 +416,7 @@
 
     <use xlink:href="#1x1" id="base-tab" fill="url(#color-primary)"/>
 
-    <use xlink:href="#4x4" id="base-progressbar-progress" fill="url(#color-primary)"/>
+    <use xlink:href="#4x4" id="base-progressbar-progress" fill="url(#color-fg-level-bar)"/>
 
     <g id="base-progressbar-trough">
       <use xlink:href="#4x4" fill="url(#color-bg)"/>
