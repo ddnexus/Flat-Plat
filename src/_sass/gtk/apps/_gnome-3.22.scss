@@ -79,7 +79,7 @@
   // border-style: solid;
   // border-width: 2px;
 
-  &.unknown { background-color: $warning_color; }
+  &.unknown { background-color: $warning_bg_color; }
 
   &.used { background-color: $primary_color; }
 
@@ -96,7 +96,7 @@
   @extend .entry-tag;
 }
 
-.conflict-row:not(:selected) { background-color: mix($warning_color, $base_color, percentage($lower_opacity)); }
+.conflict-row:not(:selected) { background-color: mix($warning_bg_color, $base_color, percentage($lower_opacity)); }
 
 // Icon view
 .nautilus-window flowboxchild {
@@ -386,7 +386,7 @@ layout {
 }
 
 entry.search-missing {
-  background-color: $error_color;
+  background-color: $error_bg_color;
   color: $inverse_fg_color;
 }
 
