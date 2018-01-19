@@ -1879,9 +1879,9 @@ StScrollBar {
     }
     &.enter-key {
       border-color: transparent;
-      background-color: $suggested_color;
+      background-color: $suggested_bg_color;
       background-image: url("assets/key-enter.svg");
-      &:active { background-color: mix($inverse_fg_color, $suggested_color, percentage($lower_opacity)); }
+      &:active { background-color: mix($inverse_fg_color, $suggested_bg_color, percentage($lower_opacity)); }
     }
     &.shift-key-lowercase {
       background-image: url("assets/key-shift.svg");
@@ -2000,9 +2000,9 @@ StScrollBar {
     &:insensitive { @include button(flat-insensitive, $tc: $inverse_fg_color); }
 
     &:default {
-      @include button(normal, $c: $suggested_color, $tc: $inverse_fg_color);
-      &:hover,&:focus { @include button(hover, $c: $suggested_color, $tc: $inverse_fg_color); }
-      &:active { @include button(active, $c: $suggested_color, $tc: $inverse_fg_color); }
+      @include button(normal, $c: $suggested_bg_color, $tc: $inverse_fg_color);
+      &:hover,&:focus { @include button(hover, $c: $suggested_bg_color, $tc: $inverse_fg_color); }
+      &:active { @include button(active, $c: $suggested_bg_color, $tc: $inverse_fg_color); }
       &:insensitive { @include button(insensitive, $c: $inverse_divider_color, $tc: $inverse_disabled_fg_color); }
     }
   }
