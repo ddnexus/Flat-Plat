@@ -210,7 +210,7 @@ GtkTextView { // This will get overridden by .view, needed by gedit line numbers
     margin: 2px;
     border-style: none none solid;
     border-width: 2px;
-    border-color: $primary_color;
+    border-color: $level_bar_fg_color;
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
@@ -1563,7 +1563,7 @@ GtkProgressBar {
   }
   &.trough {  // background
     border-radius: 0;
-    background-color: rgba($primary_color, 0.3);
+    background-color: $level_bar_bg_color;
     &.osd {
       border-style: none;
       box-shadow: none;
@@ -1575,7 +1575,7 @@ GtkProgressBar {
 // moving bit
 .progressbar {
   border-radius: 0;
-  background-color: $primary_color;
+  background-color: $level_bar_fg_color;
   &.left {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
@@ -1623,16 +1623,16 @@ GtkProgressBar {
   &.fill-block {
     // FIXME: it would be nice to set make fill blocks bigger, but we'd need
     // :nth-child working on discrete indicators
-    background-color: $primary_color;
+    background-color: $level_bar_bg_color;
     &.indicator-discrete {
       &.horizontal { margin: 0 1px; }
       &.vertical { margin: 1px 0; }
     }
     &.level-high {
-      background-color: $success_bg_color;
+      background-color: $success_color;
     }
     &.level-low {
-      background-color: $warning_bg_color;
+      background-color: $warning_color;
     }
     &.empty-fill-block {
       background-color: $divider_color;

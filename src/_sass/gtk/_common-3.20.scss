@@ -1410,7 +1410,7 @@ treeview.view {
   }
 
   &.progressbar { // progress bar in treeviews
-    border-bottom: $bar_size solid $primary_color;
+    border-bottom: $bar_size solid $level_bar_fg_color;
     box-shadow: none;
     background-color: transparent;
 
@@ -1418,7 +1418,7 @@ treeview.view {
   }
 
   &.trough { // progress bar trough in treeviews
-    border-bottom: $bar_size solid rgba($primary_color, 0.3);
+    border-bottom: $bar_size solid $level_bar_bg_color;
     box-shadow: none;
     background-color: transparent;
 
@@ -2575,9 +2575,9 @@ progressbar {
   color: $hint_fg_color;
   font-size: smaller;
 
-  trough { background-color: rgba($primary_color, 0.3); }
+  trough { background-color: $level_bar_bg_color; }
 
-  progress { background-color: $primary_color; }
+  progress { background-color: $level_bar_fg_color; }
 
   &.osd { // progressbar.osd used for epiphany page loading progress
     // min-width: $bar_size;
@@ -2622,7 +2622,7 @@ levelbar {
     // padding: 2px;
     // border-radius: $material_radius;
     // box-shadow: $shadow_1;
-    // background-color: $base_color;
+    // background-color: $primary_color;
 
     // &:disabled { background-color: $alt_base_color; }
   }
@@ -2631,7 +2631,7 @@ levelbar {
     &.low { background-color: $warning_color; }
 
     &.high,
-    &:not(.empty) { background-color: $primary_color; }
+    &:not(.empty) { background-color: $accent_color; }
 
     &.full { background-color: $success_color; }
 
