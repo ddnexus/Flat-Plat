@@ -265,8 +265,8 @@ entry {
     selection { @extend %selected_items; }
 
     // entry error and warning style
-    @each $e_type, $e_color in (error, $error_color),
-                               (warning, $warning_color) {
+    @each $e_type, $e_color in (error, $error_bg_color),
+                               (warning, $warning_bg_color) {
       &.#{$e_type} {
         @include entry(normal, $e_color);
 
@@ -511,8 +511,8 @@ button {
   }
 
   // Suggested and Destructive Action buttons
-  @each $b_type, $b_color in (suggested-action, $suggested_color),
-                             (destructive-action, $destructive_color) {
+  @each $b_type, $b_color in (suggested-action, $suggested_bg_color),
+                             (destructive-action, $destructive_bg_color) {
     &.#{$b_type} {
       background-color: $b_color;
       color: $inverse_fg_color;
