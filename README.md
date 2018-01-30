@@ -87,6 +87,8 @@ Seamless textures from various sources and authors, converted to low contrast/br
 
 - [Numix Folders](https://github.com/numixproject/numix-folders): Customization script to change the colors and style of the numix folder (otherwise too bright and saturated). Recommended settings: Style: 6, Primary color: #9c9c9c, Secondary color; #9c9c9c, Symbol: #656565
 
+- [Zafiro icons](https://github.com/zayronxio/Zafiro-icons): a flat theme with "washed" pastel colors
+
 ### GNOME Extensions
 
 - [Darker Overview](https://extensions.gnome.org/extension/1177/darker-overview/): Customize the darkness of the background in the Overview. It can also remove the ugly vignette effect
@@ -107,6 +109,7 @@ Seamless textures from various sources and authors, converted to low contrast/br
 
 - TBD: add the style settings consistent with the Equilux Palette for apps like Vivaldi, Tilix, RubyMine, SmartGit, DeepGit, ... 
 
+- [Smyck terminal](https://github.com/DarthWound/smyck-gnome-terminal): a script to use SMYCK palette in GNOME Terminal
 
 ## Branches
 
