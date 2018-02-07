@@ -111,6 +111,8 @@ Seamless textures from various sources and authors, converted to low contrast/br
 
 - [Smyck terminal](https://github.com/DarthWound/smyck-gnome-terminal): a script to use SMYCK palette in GNOME Terminal
 
+- [Equilux-Firefox](https://github.com/cj-sv/equilux-firefox): an Equilux color scheme for Firefox userContent.css and userChrome.css.
+
 ## Branches
 
 Master is always the upstream master: no changes from the base theme there.
