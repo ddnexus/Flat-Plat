@@ -6,7 +6,7 @@ if [ ! "$(which sassc 2> /dev/null)" ]; then
   exit 1
 fi
 
-_COLOR_VARIANTS=('' '-dark' '-light')
+_COLOR_VARIANTS=( '-dark' )
 if [ ! -z "${COLOR_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
 fi

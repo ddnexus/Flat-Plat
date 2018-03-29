@@ -6,8 +6,9 @@ REPO_DIR=$(cd $(dirname $0) && pwd)
 SRC_DIR=${REPO_DIR}/src
 
 DEST_DIR=/usr/share/themes
-THEME_NAME=Materia
-COLOR_VARIANTS=('' '-dark' '-light')
+THEME_NAME=Equilux
+#COLOR_VARIANTS=('' '-dark' '-light')
+COLOR_VARIANTS=('-dark')
 SIZE_VARIANTS=('' '-compact')
 
 GTK_VERSIONS=('3.18' '3.20' '3.22')
@@ -35,7 +36,7 @@ usage() {
   printf "\n%s\n" "OPTIONS:"
   printf "  %-25s%s\n" "-d, --dest DIR" "Specify theme destination directory (Default: ${DEST_DIR})"
   printf "  %-25s%s\n" "-n, --name NAME" "Specify theme name (Default: ${THEME_NAME})"
-  printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
+  #printf "  %-25s%s\n" "-c, --color VARIANTS..." "Specify theme color variant(s) [standard|dark|light] (Default: All variants)"
   printf "  %-25s%s\n" "-s, --size VARIANT" "Specify theme size variant [standard|compact] (Default: All variants)"
   printf "  %-25s%s\n" "-g, --gdm" "Install GDM theme"
   printf "  %-25s%s\n" "-h, --help" "Show this help"
@@ -47,7 +48,8 @@ usage() {
   printf "%s\n" "Install standard theme variant only"
   printf "  %s\n" "$0 --color standard --size standard"
   printf "%s\n" "Install specific theme variants with different name into ~/.themes"
-  printf "  %s\n" "$0 --dest ~/.themes --name MyTheme --color light dark --size compact"
+#  printf "  %s\n" "$0 --dest ~/.themes --name MyTheme --color light dark --size compact"
+  printf "  %s\n" "$0 --dest ~/.themes --name MyTheme --size compact"
 }
 
 install() {
@@ -59,7 +61,8 @@ install() {
   [[ ${color} == '-dark' ]] && local ELSE_DARK=${color}
   [[ ${color} == '-light' ]] && local ELSE_LIGHT=${color}
 
-  local THEME_DIR=${dest}/${name}${color}${size}
+#  local THEME_DIR=${dest}/${name}${color}${size}
+  local THEME_DIR=${dest}/${name}${size}
 
   [[ -d ${THEME_DIR} ]] && rm -rf ${THEME_DIR}
 
@@ -163,18 +166,19 @@ while [[ $# -gt 0 ]]; do
       shift
       for variant in "${@}"; do
         case "${variant}" in
-          standard)
+#          standard)
+#            colors+=("${COLOR_VARIANTS[0]}")
+#            shift
+#            ;;
+          dark)
+#            colors+=("${COLOR_VARIANTS[1]}")
             colors+=("${COLOR_VARIANTS[0]}")
             shift
             ;;
-          dark)
-            colors+=("${COLOR_VARIANTS[1]}")
-            shift
-            ;;
-          light)
-            colors+=("${COLOR_VARIANTS[2]}")
-            shift
-            ;;
+#          light)
+#            colors+=("${COLOR_VARIANTS[2]}")
+#            shift
+#            ;;
           -*|--*)
             break
             ;;
