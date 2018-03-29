@@ -6,8 +6,8 @@ REPO_DIR="$(cd "$(dirname "$0")" && pwd)"
 SRC_DIR="$REPO_DIR/src"
 
 DEST_DIR="/usr/share/themes"
-THEME_NAME="Materia"
-COLOR_VARIANTS=('' '-dark' '-light')
+THEME_NAME="Equilux"
+COLOR_VARIANTS=('-dark')
 SIZE_VARIANTS=('' '-compact')
 
 GTK_VERSIONS=('3.0')
@@ -63,7 +63,7 @@ install() {
   [[ "$color" == '-dark' ]] && local ELSE_DARK="$color"
   [[ "$color" == '-light' ]] && local ELSE_LIGHT="$color"
 
-  local THEME_DIR="$dest/$name$color$size"
+  local THEME_DIR="$dest/$name$size"
 
   # SC2115: Protect /.
   [[ -d "$THEME_DIR" ]] && rm -rf "${THEME_DIR:?}"
@@ -119,7 +119,7 @@ install() {
 
 # Bakup and install files related to GDM theme
 install_gdm() {
-  local THEME_DIR="$1/$2$3$4"
+  local THEME_DIR="$1/$2$4"
   local GS_THEME_FILE="/usr/share/gnome-shell/gnome-shell-theme.gresource"
   local UBUNTU_THEME_FILE="/usr/share/gnome-shell/theme/ubuntu.css"
 
@@ -159,24 +159,24 @@ while [[ "$#" -gt 0 ]]; do
       ;;
     -g|--gdm)
       gdm='true'
-      shift 1 
+      shift 1
       ;;
     -c|--color)
       shift
       for variant in "$@"; do
         case "$variant" in
-          standard)
+#          standard)
+#            colors+=("${COLOR_VARIANTS[0]}")
+#            shift
+#            ;;
+          dark)
             colors+=("${COLOR_VARIANTS[0]}")
             shift
             ;;
-          dark)
-            colors+=("${COLOR_VARIANTS[1]}")
-            shift
-            ;;
-          light)
-            colors+=("${COLOR_VARIANTS[2]}")
-            shift
-            ;;
+#          light)
+#            colors+=("${COLOR_VARIANTS[2]}")
+#            shift
+#            ;;
           -*)
             break
             ;;

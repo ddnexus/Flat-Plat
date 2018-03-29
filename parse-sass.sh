@@ -8,7 +8,7 @@ fi
 
 SASSC_OPT=('-M' '-t' 'expanded')
 
-_COLOR_VARIANTS=('' '-dark' '-light')
+_COLOR_VARIANTS=('-dark')
 _SIZE_VARIANTS=('' '-compact')
 
 GTK_VERSIONS=('3.0')

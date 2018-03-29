@@ -54,9 +54,13 @@ case "${1:-}" in
   gtk2-dark)
     gtk2_dark
     ;;
+  equilux)
+    gtk
+    gtk2_dark
+    ;;
   *)
     echo "Unknown argument '$1'"
-    echo "Use 'chrome', 'gtk', 'gtk2', 'gtk2-light' or 'gtk2-dark' as an argument."
+    echo "Use 'chrome', 'gtk', 'gtk2', 'gtk2-light', 'gtk2-dark', or 'equilux' as an argument."
     exit 1
     ;;
 esac
