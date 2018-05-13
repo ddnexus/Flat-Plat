@@ -2053,7 +2053,7 @@ switch {
     outline-offset: 0;
     -gtk-outline-radius: $circular_radius;
     box-shadow: $shadow_1;
-    background-color: $lighter_bg_color;
+    background-color: $e75;
   }
 
   &:focus slider { outline-width: (48px - 20px) / 2; }
@@ -2065,7 +2065,7 @@ switch {
     outline-color: rgba($accent_color, 0.2);
   }
 
-  &:disabled slider { background-color: $bg_color; }
+  &:disabled slider { background-color: $base_color; }
 
   row:selected & {
   }
