@@ -109,3 +109,6 @@ $opaque_divider_color:                 mix($e190, $base_color, percentage(0.12))
 
 // FIXME: gtk @placeholder_text_color does not allow translucent colors
 $placeholder_text_color:               mix($white, $base_color, percentage(0.7));
+
+$level_bar_fg_color:                   $e190;
+$level_bar_bg_color:                   rgba($e190, 0.3);
