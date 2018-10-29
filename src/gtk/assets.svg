@@ -5,7 +5,7 @@
 
   <defs>
     <linearGradient id="color-fg-inverse">
-      <stop stop-color="#FFFFFF"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-divider">
@@ -13,11 +13,11 @@
     </linearGradient>
 
     <linearGradient id="color-divider-dark">
-      <stop stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop stop-color="#bebebe" stop-opacity="0.12"/>
     </linearGradient>
 
     <linearGradient id="color-secondary">
-      <stop stop-color="#01A299"/>
+      <stop stop-color="#bebebe"/>
     </linearGradient>
 
     <linearGradient id="color-bg">
@@ -25,7 +25,7 @@
     </linearGradient>
 
     <linearGradient id="color-bg-dark">
-      <stop stop-color="#282828"/>
+      <stop stop-color="#323232"/>
     </linearGradient>
 
     <linearGradient id="color-bg-button">
@@ -33,7 +33,7 @@
     </linearGradient>
 
     <linearGradient id="color-bg-button-dark">
-      <stop stop-color="#424242"/>
+      <stop stop-color="#373737"/>
     </linearGradient>
 
     <rect width="24" height="24" fill="none" stroke="none" id="24x24"/>
