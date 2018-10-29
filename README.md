@@ -1,156 +1,136 @@
-# Materia
+# Equilux Theme
 
-![widget-factory](../images/widget-factory.png?raw=true)
+![Screenshot](screenshot.png)
 
-Materia (formerly Flat-Plat) is a [Material Design](https://material.io) theme for GNOME/GTK+ based desktop environments.  
-It supports GTK+ 3, GTK+ 2, GNOME Shell, Budgie, Cinnamon, MATE, Unity, LightDM, GDM, Chrome theme, etc.
+The Equilux Theme provides a couple of full-dark, neutral-gray theme for GNOME/GTK+ based desktop environments. It supports GTK+ 3, GTK+ 2, GNOME Shell, Budgie, MATE, Unity, LightDM, GDM, Chrome theme, etc.
 
-Also Materia has compatibility with [oomox theme designer](https://github.com/themix-project/oomox).
+It is based on the [Materia Theme](https://github.com/nana-4/materia-theme). For detailed features and documentation, please, check upstream.
 
-## Features
+### Motivation
 
-**Ripple effect** animations for GTK+ 3 are supported:
+The Equilux themes provide a neutral dark-balanced color-scheme not designed to be __fancy__, but to be __useful__ for a few specific goals.
 
-![Button](../images/Button.gif?raw=true)
+1. __Minimize eye strain__: when you pass many hours in front of the screen or you are hyper-sensitive to light, saturation and contrast, your eyes will benefit from a dull UI
 
-**3 color variants** and **2 size variants** are available:
+2. __Avoid disrupting your circadian rhythms__: a neutral color-cast-free UI helps your body to produce enough melatonin at night time and sleep better, working nicely with software like `f.lux`, `redshift`, `NightLight`, ...
 
-| **Materia** | **standard** | **compact** |
-| :-: | :-: | :-: |
-| **standard** | ![Materia][1] | ![Materia-compact][2] |
-| **dark** | ![Materia-dark][3] | ![Materia-dark-compact][4] |
-| **light** | ![Materia-light][5] | ![Materia-light-compact][6] |
+3. __Professional use in image editing, graphic design, 3D rendering__: in that fields any color cast or excessive contrast, brightness or darkness introduced by the UI would affect the overall perception of the color and balance of the images
 
-[1]: ../images/Materia.png?raw=true
-[2]: ../images/Materia-compact.png?raw=true
-[3]: ../images/Materia-dark.png?raw=true
-[4]: ../images/Materia-dark-compact.png?raw=true
-[5]: ../images/Materia-light.png?raw=true
-[6]: ../images/Materia-light-compact.png?raw=true
+4. __You may just like it__: even if the style is not the main goal, many people find that its very clean and minimalistic UI looks cool and professional
 
-Various **desktop environments** are supported:
 
-- GNOME Shell `>=3.18`
-- Budgie `>=10.2.5`
-- Cinnamon `>=3.x`
-- MATE `>=1.14`
-- Unity `>=7.4`
+### Technical Focus
 
-## Requirements
+The Equilux Theme sticks to the upstream theme as much as possible, and is exclusively focused on the following points:
 
-- GTK+ `>=3.20`
-- `gnome-themes-extra` (or `gnome-themes-standard`)
-- Murrine engine — The package name depends on the distro.
-  - `gtk-engine-murrine` on Arch Linux
-  - `gtk-murrine-engine` on Fedora
-  - `gtk2-engine-murrine` on openSUSE
-  - `gtk2-engines-murrine` on Debian, Ubuntu, etc.
-- `bc` — build dependency
+- Total removal of any color cast from the background elements (neutral base)
+- Use of a neutral base for all the UI elements, with exception of a few button/boxes
+- Maximum reduction of contrast/saturation
+- Medium overall brightness/darkness of the UI
 
-## Installation
+### Changes from the Upstream Theme
 
-### Packages
+- The installer script installs only the Equilux variants
+- Addition of Ubuntu font family and removal of the "M+ c1" font.
+- A few minor cosmetic fixes
+- Minimal changes in the color assignations in order to make the Equilux palette work OK with the theme.
 
-| Distro | Maintainer | Install Command |
-| :-- | :-- | :-- |
-| Arch Linux <sup>[[Official][Arch]]</sup> | @ArchangeGabriel | `sudo pacman -S materia-gtk-theme` |
-| Debian 10 / sid <sup>[[Official][Debian]]</sup> <br> Ubuntu 18.04+ | @isaagar | `sudo apt install materia-gtk-theme` |
-| Ubuntu 16.04 / 17.10 <sup>[[PPA][PPA]]</sup> | @igor-dyatlov | `sudo add-apt-repository ppa:dyatlov-igor/materia-theme` <br> `sudo apt update` <br> `sudo apt install materia-gtk-theme` |
-| Fedora <sup>[[Copr][Copr]]</sup> | @LaurentTreguier | `sudo dnf copr enable tcg/themes` <br> `sudo dnf install materia-theme` |
+## Theme Installation/Uninstallation
 
-[Arch]: https://www.archlinux.org/packages/community/any/materia-gtk-theme
-[Debian]: https://packages.debian.org/unstable/materia-gtk-theme
-[PPA]: https://launchpad.net/~dyatlov-igor/+archive/ubuntu/materia-theme
-[Copr]: https://copr.fedorainfracloud.org/coprs/tcg/themes
+**Installation**: Download the latest `equilux-theme-*.tar.xz` version listed in the __Files__ tab [here](https://www.opendesktop.org/p/1182169/), unzip it and move the Equilux* dirs to `/usr/share/themes`. As an alternative you can download the source of the latest release [here](https://github.com/ddnexus/equilux-theme/releases) and run the `install.sh` script as privileged user.
 
-#### Flatpak
+**Uninstallation**: Delete the installed directories: `sudo rm -rf /usr/share/themes/Equilux{,-compact}`
 
-3 variants (Materia, Materia-dark, Materia-light) are available via Flathub:
+## Font Customization
+
+After you install the themes, you may want to customize the fonts by editing the `font-family` CSS rule inside the installed CSS file(s) `/usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css`.
+
+Here is the current line that affects the fonts:
 
 ```
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub org.gtk.Gtk3theme.Materia
-flatpak install flathub org.gtk.Gtk3theme.Materia-dark
-flatpak install flathub org.gtk.Gtk3theme.Materia-light
+font-family: Roboto, Ubuntu, Cantarell, Sans-Serif;
 ```
 
-### Manual Installation
+You can edit it manually with any text-editor, or you can run a simple command (courtesy of nana-4). Just remember to edit the "your-preferred-font" string :).
 
-Run the following commands in the terminal:
-
-```sh
-cd /tmp && wget -qO - https://github.com/nana-4/materia-theme/archive/master.tar.gz | tar xz
-cd materia-theme-master
-sudo ./install.sh
-```
-
-Note: `./install.sh` allows the following options:
+For example: prepending `your-preferred-font`:
 
 ```
--d, --dest DIR           Specify destination directory
--n, --name NAME          Specify theme name
--c, --color VARIANTS...  Specify color variant(s) [standard|dark|light]
--s, --size VARIANT       Specify size variant [standard|compact]
+sudo sed -i 's/Roboto/your-preferred-font, Roboto/g' /usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css
 ```
 
-Without any options, Materia will be installed with all variants into `/usr/share/themes`.  
-Try `./install.sh --help` for more information.
+or switching priority between `Roboto` and `Ubuntu`:
 
-### Manual Uninstallation
-
-Delete the installed directories:
-
-```sh
-sudo rm -rf /usr/share/themes/Materia{,-compact,-dark,-dark-compact,-light,-light-compact}
+```
+sudo sed -i 's/Roboto, Ubuntu/Ubuntu, Roboto/g' /usr/share/themes/Equilux{,-compact}/gnome-shell/gnome-shell.css
 ```
 
-## Recommendations
+or change it as you prefer.
 
-#### Font
+## GDM Theme Installation/Uninstallation
 
-- To properly display the theme, use a font family including **Medium** weight (e.g. [Roboto](https://github.com/google/roboto) or [M+](https://mplus-fonts.osdn.jp)).
-- Set the font size to `9.75` or `10.5` (i.e. 13px or 14px at 96dpi).
+See the the upstream instruction [here](https://github.com/nana-4/materia-theme/wiki/GDM-Theme).
 
-#### Chrome Theme
+## Related Items
 
-To use the Chrome theme;
+A quick list of items that - for different reasons - fit well with the Equilux style and concept. Please, submit your suggestions as a new Issue, so I will add a note in this section.
 
-1. Open the `chrome` folder on `/usr/share/themes/Materia<-variant>`.
-2. Drag and drop the `.crx` files into the Chrome/Chromium Extensions page (`chrome://extensions`).
+### Wallpapers
 
-#### GDM Theme
+Seamless textures from various sources and authors, converted to low contrast/brightness grayscale available in the __Files__ tab [here](https://www.opendesktop.org/p/1182169/)
 
-You can change the GDM (lock/login screen) theme by replacing the default GNOME Shell theme.  
-See the wiki for details: https://github.com/nana-4/materia-theme/wiki/GDM-Theme
+### Icons
 
-## Customization
+- [Circle Numix Icons](https://github.com/numixproject/numix-icon-theme-circle): a circle themed icon set well maintained and not too bright (if you use Numix Folders below to tame the folder colors)
 
-Materia allows you to change the color scheme relatively easily. See [`HACKING.md`](HACKING.md#how-to-change-the-color-scheme) for details.
+- [Numix Folders](https://github.com/numixproject/numix-folders): Customization script to change the colors and style of the numix folders (otherwise too bright and saturated). Recommended settings: Style: 6, Primary color: #9c9c9c, Secondary color; #9c9c9c, Symbol: #656565
 
-## Contributing
+- [Zafiro icons](https://github.com/zayronxio/Zafiro-icons): a flat theme with "washed" pastel colors
 
-If you find bugs or have suggestions, please report it to the [issue tracker](https://github.com/nana-4/materia-theme/issues). Any contribution would be much appreciated.
+- [Papirus-Icon-Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/): a flat, sticker-like icon theme with a few variants (recommended Papirus-Dark)
 
-ToDo list can be found here: [`TODO.md`](TODO.md)
+- [Papirus Folders Script](https://github.com/PapirusDevelopmentTeam/papirus-folders): Customization script to change the colors of the papirus folders. Recommended command: `papirus-folders -C grey --theme Papirus-Dark`
 
-## Related Projects
+### GNOME Extensions
 
-- [**Materia KDE**](https://github.com/PapirusDevelopmentTeam/materia-kde) by @PapirusDevelopmentTeam
-- [**Materia VSCode Theme**](https://marketplace.visualstudio.com/items?itemName=m-thorsen.vscode-material-mt) by @m-thorsen
-- [**Materia Kolorizer**](https://github.com/DarthWound/materia-kolorizer) by @DarthWound
+- [Darker Overview](https://extensions.gnome.org/extension/1177/darker-overview/): Customize the darkness of the background in the Overview. It can also remove the ugly vignette effect
+
+- [Desaturate All](https://extensions.gnome.org/extension/1102/desaturate-all/): Desature the entire gnome workspace (I hacked a copy to have 4 deaturation levels instead of all-or-none: ask if interested)
+
+- [AppMenu Regular Icons](https://extensions.gnome.org/extension/970/appmenu-regular-icons/): Disables Symbolic Icons in the app menu. In the mostly grayscale UI, a small colored icon is useful to quickly identify the app you are in. Besides it normalizes the icons that otherwise would be grey or colored with no particular consistence.
+
+- [Background Logo](https://extensions.gnome.org/extension/889/background-logo/): Overlay an icon/pict in the bottom right corner. A bit buggy and useless :) but a nice touch.
+
+### App Themes and Settings
+
+- [Equilux-Telegram](https://github.com/aquatix/Equilux-Telegram-Theme)
+
+- [Equilux-Flubox](https://www.opendesktop.org/p/1193958/)
+
+- [HexChat](https://dl.hexchat.net/themes/Zenburn.hct): the Zenburn theme fits well with Equilux
+
+- [Smyck terminal](https://github.com/DarthWound/smyck-gnome-terminal): a script to use SMYCK palette in GNOME Terminal
+
+- [Equilux-Firefox](https://github.com/cj-sv/equilux-firefox): an Equilux color scheme for Firefox userContent.css and userChrome.css.
+
+- [Tint2](https://gist.github.com/meskarune/329826937aea0effdbfa9f3bdc7e7989): tint2 panel theme that matches Equilux.
+
+- TBD: add the style settings consistent with the Equilux Palette for apps like Vivaldi, Tilix, RubyMine, SmartGit, DeepGit, ...
+
+### Browser Extensions
+
+- [Dark Reader](https://github.com/darkreader/darkreader): Chrome and FireFox extension that inverts brightness of web pages and aims to reduce eyestrain while browsing the web.
+
+## Branches
+
+Master is always the upstream master: no changes from the base theme there.
+The `equilux-*` branch(es) are the branches with the changes from the upstream master.
+Please, notice that the `*-dev` branches are getting rebased on top of master at each new release. The old versions will be tagged and will not be removed/rebased.
 
 ## License
 
-Materia is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
+The Equilux Theme is distributed under the terms of the GNU General Public License, version 2 or later. See the [`COPYING`](COPYING) file for details.
 
 ## Credits
 
-- Materia is based on [Adwaita](HACKING.md#upstream-theme-sources) by GNOME.
-- Design and specifications are based on Google's [Material Design](https://material.io).
-- The included symbolic icons are based on [Material Design icons](https://github.com/google/material-design-icons) by Google.
-- Chrome/Chromium scrollbars extension was forked from [Adwaita-chrome-scrollbar](https://github.com/gnome-integration-team/chrome-gnome-scrollbar) by GNOME Integration Team.
-- Yauhen Kirylau (@actionless) who is oomox author polished scripts and supported Materia with [oomox](https://github.com/themix-project/oomox).
-- @n3oxmind who helped improve the installation script.
-- @smurphos who made and provided the Cinnamon theme for Materia.
-
-Also thank you to all contributors and upstream developers.
+- All credits go to the [Materia Theme](https://github.com/nana-4/materia-theme), its author and contributors.
