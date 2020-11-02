@@ -6279,6 +6279,14 @@ calendar.raven-calendar:selected {
   background-color: #373737;
 }
 
+.nemo-window .nemo-window-pane widget.entry {
+  border: 1px solid;
+  border-radius: 3px;
+  color: #DADADA;
+  border-color: #292929;
+  background-color: #404040;
+  box-shadow: inset 1px 0 #323232, inset -1px 0 #323232, inset 0 1px #323232, inset 0 -1px #323232; }
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
