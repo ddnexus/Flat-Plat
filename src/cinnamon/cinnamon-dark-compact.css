@@ -878,7 +878,7 @@ StScrollView StScrollBar {
 }
 
 .calendar-day-base:active {
-  color: #bebebe;
+  color: #323232;
   background-color: #bebebe;
   border-color: transparent;
 }
